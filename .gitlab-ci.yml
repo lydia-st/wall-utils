@@ -1,6 +1,7 @@
 # build wall-util, then publish to glab releases
 stages:
   - build
+  - release
 
 build:
   image: rust:latest
