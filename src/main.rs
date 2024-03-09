@@ -155,7 +155,7 @@ fn main() {
     println!("starting with configs:");
     println!("    interval  {}", interval);
     println!("    paths     {:?}", paths);
-    println!("    config    {:?}", opt.config);
+    // println!("    config    {:?}", opt.config);
     println!();
 
     check_dependencies();
