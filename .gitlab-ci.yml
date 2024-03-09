@@ -1,7 +1,6 @@
 # build wall-util, then publish to glab releases
 stages:
   - build
-  - release
 
 build:
   image: rust:latest
@@ -31,6 +30,7 @@ release:
     - if: $CI_COMMIT_BRANCH
 
   script:
+    - echo $CI_COMMIT_TAG $CI_COMMIT_REF_NAME $CI_COMMIT_BRANCH
     - release-cli create --name "wall-util" --tag-name $CI_COMMIT_TAG --description "wall-util" --ref $CI_COMMIT_REF_NAME --assets-link "target/release/wall-util" --assets-name "wall-util"
     - release-cli publish
 
