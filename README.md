@@ -4,7 +4,7 @@ A helpful utility to have your wallpaper changed automatically.
 
 ## Installation
 
-You can either manually build the project, or (soon) download the pre-built binaries.
+You can either manually build the project, or download the pre-built binaries.
 
 ### Manual Build
 
@@ -14,7 +14,25 @@ cd wall-util
 cargo build --release
 ```
 
+### Pre-built Binaries
+
+Navigate to the [Artifacts](https://gitlab.com/lydia-st/wall-util/-/artifacts) page and download the latest successful 
+pipeline's artifacts, as shown in the image below:
+
+![A screenshot of a computer screen showing a list of artifacts titled "Artifacts". The total size of the artifacts is 1.23 MiB. There are two artifacts listed: "wall-util_from_master.zip archive" (size: 1.22 MiB, created 1 minute ago) and "metadata.gz" (size: 190 B).](assets/artifact.png)
+
+Then, extract the zip and find the binary. You can either run it from the terminal, or move it to a directory in your 
+`$PATH` to run it from anywhere. You might also need to make it executable with `chmod +x ./wall-util`.
+
 ## Usage
+
+### Prerequisites
+
+- [swww](https://github.com/LGFae/swww) - Efficient animated wallpaper daemon for wayland, controlled at runtime
+- [Pywal](https://github.com/dylanaraps/pywal) - Generate and change color-schemes on the fly.
+- [Pywalfox](https://github.com/Frewacom/pywalfox) -  Dynamic theming of Firefox (and Thunderbird) using your Pywal colors
+
+### Help
 
 ```bash
 
